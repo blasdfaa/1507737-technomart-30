@@ -1659,7 +1659,8 @@ img {
   text-decoration: none;
 }
 
-.main-links__link:hover {
+.main-links__link:hover,
+.main-links__link:focus {
   text-decoration: underline;
 }
 
@@ -1689,7 +1690,8 @@ img {
   text-decoration: none;
 }
 
-.secondary-links__link:hover {
+.secondary-links__link:hover,
+.secondary-links__link:focus {
   text-decoration: underline;
 }
 
