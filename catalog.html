@@ -186,7 +186,8 @@
                 <label for="filter-dewalt" class="filter-brand__label">Dewalt</label>
               </li>
               <li class="filter-brand__item">
-                <input type="checkbox" class="filter-brand__checkbox visually-hidden" name="hitachi" id="filter-hitachi">
+                <input type="checkbox" class="filter-brand__checkbox visually-hidden" name="hitachi"
+                       id="filter-hitachi">
                 <label for="filter-hitachi" class="filter-brand__label">Hitachi</label>
               </li>
             </ul>
@@ -197,11 +198,13 @@
 
             <ul class="filter-supply__list">
               <li class="filter-supply__item">
-                <input type="radio" class="filter-supply__radio visually-hidden" name="supply" id="filter-battery" value="battery" checked>
+                <input type="radio" class="filter-supply__radio visually-hidden" name="supply" id="filter-battery"
+                       value="battery" checked>
                 <label for="filter-battery" class="filter-supply__label">Аккумуляторные</label>
               </li>
               <li class="filter-supply__item">
-                <input type="radio" class="filter-supply__radio visually-hidden" name="supply" id="filter-network" value="network">
+                <input type="radio" class="filter-supply__radio visually-hidden" name="supply" id="filter-network"
+                       value="network">
                 <label for="filter-network" class="filter-supply__label">Сетевые</label>
               </li>
             </ul>
@@ -212,7 +215,27 @@
       </section>
 
       <section class="catalog__sort sorting">
+        <form action="https://echo.htmlacademy.ru" class="sorting__form" method="get">
+          <h2 class="sorting__title">Сортировка:</h2>
 
+          <ul class="sorting__list">
+            <li class="sorting__item sorting__item--price">
+              <button class="btn sorting__btn" name="by-price">По цене</button>
+            </li>
+            <li class="sorting__item sorting__item--type">
+              <button class="btn sorting__btn" name="by-type">По типу</button>
+            </li>
+            <li class="sorting__item sorting__item--functional">
+              <button class="btn sorting__btn" name="by-functional">По функционалу</button>
+            </li>
+            <li class="sorting__item sorting__item--up">
+              <button class="btn sorting__arrow sorting__arrow--up" name="to-up"><span class="visually-hidden">По возрастанию</span></button>
+            </li>
+            <li class="sorting__item sorting__item--down">
+              <button class="btn sorting__arrow sorting__arrow--down" name="to-down"><span class="visually-hidden">По убыванию</span></button>
+            </li>
+          </ul>
+        </form>
       </section>
 
       <section class="catalog__content products">
