@@ -220,19 +220,21 @@
 
           <ul class="sorting__list">
             <li class="sorting__item sorting__item--price">
-              <button class="btn sorting__btn" name="by-price">По цене</button>
+              <button class="btn sorting__btn" name="by-price" type="submit">По цене</button>
             </li>
             <li class="sorting__item sorting__item--type">
-              <button class="btn sorting__btn" name="by-type">По типу</button>
+              <button class="btn sorting__btn" name="by-type" type="submit">По типу</button>
             </li>
             <li class="sorting__item sorting__item--functional">
-              <button class="btn sorting__btn" name="by-functional">По функционалу</button>
+              <button class="btn sorting__btn" name="by-functional" type="submit">По функционалу</button>
             </li>
             <li class="sorting__item sorting__item--up">
-              <button class="btn sorting__arrow sorting__arrow--up" name="to-up"><span class="visually-hidden">По возрастанию</span></button>
+              <button class="btn sorting__arrow sorting__arrow--up" name="to-up" type="submit"><span class="visually-hidden">По возрастанию</span>
+              </button>
             </li>
             <li class="sorting__item sorting__item--down">
-              <button class="btn sorting__arrow sorting__arrow--down" name="to-down"><span class="visually-hidden">По убыванию</span></button>
+              <button class="btn sorting__arrow sorting__arrow--down" name="to-down" type="submit"><span class="visually-hidden">По убыванию</span>
+              </button>
             </li>
           </ul>
         </form>
@@ -400,8 +402,40 @@
           </li>
         </ul>
       </section>
+
+      <section class="catalog__pagination pagination">
+        <h2 class="visually-hidden">Нумерация страниц</h2>
+
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a class="btn pagination__link pagination__link--current" aria-label="Показать 1 страницу">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="btn pagination__link" href="#" aria-label="Показать 2 страницу">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="btn pagination__link" href="#" aria-label="Показать 3 страницу">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="btn pagination__link pagination__link--next" href="#">Следующая</a>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
+
+  <section class="catalog__info product-info">
+    <div class="container product-info__wrapper">
+      <h2 class="product-info__title">Пара слов о перфораторах</h2>
+
+      <p class="product-info__desc">Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для
+        сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне. <br>
+        Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции
+        дрели, шуруповерта и&nbsp;отбойного молотка.
+        В&nbsp;ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в&nbsp;одном устройстве будут совмещены
+        отбойный молоток и&nbsp;ударная дрель.</p>
+  </section>
+    </div>
 </main>
 
 <footer class="page-footer">
