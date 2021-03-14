@@ -124,7 +124,7 @@ modalCloseMap.addEventListener('click', () => {
 
 
 const productBookmarkBtn = document.querySelectorAll('.product__bookmark');
-const bookmarkCount = document.querySelector('.header-menu__link--cart');
+const bookmarkCount = document.querySelector('.header-menu__link--bookmarks');
 
 productBookmarkBtn.forEach(function (item) {
   item.addEventListener('click', () => {
