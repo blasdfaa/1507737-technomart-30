@@ -576,6 +576,10 @@ img {
   color: var(--main-text-red-color);
 }
 
+.page-catalog .user-info__title {
+  margin: 0 42px 0 0;
+}
+
 .user-info__contacts {
   display: flex;
   flex-direction: column;
