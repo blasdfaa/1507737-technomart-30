@@ -27,7 +27,10 @@ function tabsClick(item) {
   })
 }
 
-document.querySelector('.tab-panel__btn').click();
+if (document.querySelector('.tab-panel__btn')) {
+  document.querySelector('.tab-panel__btn').click()
+}
+
 
 
 // Feedback modal
@@ -122,9 +125,10 @@ modalCloseMap.addEventListener('click', () => {
 
 // Bookmark active
 
-
 const productBookmarkBtn = document.querySelectorAll('.product__bookmark');
 const bookmarkCount = document.querySelector('.header-menu__link--bookmarks');
+const productOrderBtn = document.querySelectorAll('.product__order');
+const cartCount = document.querySelector('.header-menu__link--cart');
 
 productBookmarkBtn.forEach(function (item) {
   item.addEventListener('click', () => {
@@ -136,9 +140,19 @@ productBookmarkBtn.forEach(function (item) {
   })
 });
 
+productOrderBtn.forEach(function (item) {
+  item.addEventListener('click', () => {
+    if (!cartCount.classList.contains('header-menu__link--current')) {
+      cartCount.classList.add('header-menu__link--current')
+    } else {
+      cartCount.classList.remove('header-menu__link--current')
+    }
+  })
+});
+
 // Notice modal
 
-const productOrderBtn = document.querySelectorAll('.product__order');
+
 const modalNotice = document.querySelector('.add-cart');
 const modalCloseNotice = modalNotice.querySelector('.modal-close');
 const continueBtn = modalNotice.querySelector('.add-cart__btn--continue');
