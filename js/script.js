@@ -36,7 +36,7 @@ const feedbackModal = document.querySelector('.modal-feedback');
 const openFeedbackButton = document.querySelector('.contacts__btn');
 const feedbackForm = document.querySelector('.modal-feedback__form');
 
-const feedbackClose = feedbackModal.querySelector('.modal-feedback__close');
+const modalClose = feedbackModal.querySelector('.modal-close');
 const emailInput = feedbackModal.querySelector('[name=feedback-email]');
 const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
 const messageInput = feedbackModal.querySelector('[name=feedback-message]');
@@ -75,7 +75,7 @@ openFeedbackButton.addEventListener("click", (evt) => {
   }
 });
 
-feedbackClose.addEventListener("click", () => {
+modalClose.addEventListener("click", () => {
   localStorage.setItem('user-name', userNameInput.value)
   localStorage.setItem('user-email', emailInput.value)
   localStorage.setItem('user-message', messageInput.value)
@@ -110,14 +110,51 @@ window.addEventListener('keyup', (evt) => {
 
 const mapModal = document.querySelector('.modal-map');
 const openMapButton = document.querySelector('.contacts__map');
-const mapClose = mapModal.querySelector('.modal-map__close');
+const modalCloseMap = mapModal.querySelector('.modal-close');
 
 openMapButton.addEventListener('click', () => {
   mapModal.classList.add('modal--show')
 });
 
-mapClose.addEventListener('click', () => {
+modalCloseMap.addEventListener('click', () => {
   mapModal.classList.remove('modal--show')
+});
+
+// Bookmark active
+
+
+const productBookmarkBtn = document.querySelectorAll('.product__bookmark');
+const bookmarkCount = document.querySelector('.header-menu__link--cart');
+
+productBookmarkBtn.forEach(function (item) {
+  item.addEventListener('click', () => {
+    if (!bookmarkCount.classList.contains('header-menu__link--current')) {
+      bookmarkCount.classList.add('header-menu__link--current')
+    } else {
+      bookmarkCount.classList.remove('header-menu__link--current')
+    }
+  })
+});
+
+// Notice modal
+
+const productOrderBtn = document.querySelectorAll('.product__order');
+const modalNotice = document.querySelector('.add-cart');
+const modalCloseNotice = modalNotice.querySelector('.modal-close');
+const continueBtn = modalNotice.querySelector('.add-cart__btn--continue');
+
+productOrderBtn.forEach(function (item) {
+  item.addEventListener('click', () => {
+    modalNotice.classList.add('modal--show')
+  })
+});
+
+modalCloseNotice.addEventListener('click', () => {
+  modalNotice.classList.remove('modal--show')
+});
+
+continueBtn.addEventListener('click', () => {
+  modalNotice.classList.remove('modal--show')
 });
 
 // Map

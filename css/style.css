@@ -1926,7 +1926,6 @@ img {
 /*Modal add cart*/
 
 .add-cart {
-  display: none;
   margin-left: 16px;
   width: 620px;
   min-height: 282px;
