@@ -1,127 +1,146 @@
 
-// Services tabs
 
-const tabsBtn = document.querySelectorAll('.tab-panel__btn');
-const tabsItems = document.querySelectorAll('.tab-content__item')
+if (document.querySelector('body').classList.contains('page')) {
+  // Services tabs
 
-tabsBtn.forEach(tabsClick);
+  const tabsBtn = document.querySelectorAll('.tab-panel__btn');
+  const tabsItems = document.querySelectorAll('.tab-content__item')
 
-function tabsClick(item) {
-  item.addEventListener('click', function () {
-    let activeBtn = item
-    let tabId = activeBtn.getAttribute('data-tab')
-    let activeTab = document.querySelector(tabId)
+  tabsBtn.forEach(tabsClick);
 
-    if (!activeBtn.classList.contains('tab-panel__btn--active')) {
-      tabsBtn.forEach(function (item) {
-        item.classList.remove('tab-panel__btn--active')
-      })
+  function tabsClick(item) {
+    item.addEventListener('click', function () {
+      let activeBtn = item
+      let tabId = activeBtn.getAttribute('data-tab')
+      let activeTab = document.querySelector(tabId)
 
-      tabsItems.forEach(function (item) {
-        item.classList.remove('tab-content__item--active')
-      })
+      if (!activeBtn.classList.contains('tab-panel__btn--active')) {
+        tabsBtn.forEach(function (item) {
+          item.classList.remove('tab-panel__btn--active')
+        })
 
-      activeBtn.classList.add('tab-panel__btn--active')
-      activeTab.classList.add('tab-content__item--active')
+        tabsItems.forEach(function (item) {
+          item.classList.remove('tab-content__item--active')
+        })
+
+        activeBtn.classList.add('tab-panel__btn--active')
+        activeTab.classList.add('tab-content__item--active')
+      }
+    })
+  }
+
+  if (document.querySelector('.tab-panel__btn')) {
+    document.querySelector('.tab-panel__btn').click()
+  }
+
+  // Feedback modal
+
+  const feedbackModal = document.querySelector('.modal-feedback');
+  const openFeedbackButton = document.querySelector('.contacts__btn');
+  const feedbackForm = document.querySelector('.modal-feedback__form');
+
+  const modalClose = feedbackModal.querySelector('.modal-close');
+  const emailInput = feedbackModal.querySelector('[name=feedback-email]');
+  const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
+  const messageInput = feedbackModal.querySelector('[name=feedback-message]');
+
+  let inStorageSupport = true;
+  let userNameStorage;
+  let emailStorage;
+  let messageStorage;
+
+  try {
+    userNameStorage = localStorage.getItem('user-name')
+    emailStorage = localStorage.getItem('user-email')
+    messageStorage = localStorage.getItem('user-message')
+  } catch (err) {
+    inStorageSupport = false;
+  }
+
+  openFeedbackButton.addEventListener("click", (evt) => {
+    feedbackModal.classList.add('modal--show')
+
+    if (userNameStorage) {
+      userNameInput.value = userNameStorage
+      emailInput.focus()
+    } else {
+      userNameInput.focus()
     }
-  })
-}
+    if (emailStorage) {
+      emailInput.value = emailStorage
+      messageInput.focus()
+    } else {
+      emailInput.focus()
+    }
+    if (messageStorage) {
+      messageInput.value = messageStorage
+      userNameInput.focus()
+    }
+  });
 
-if (document.querySelector('.tab-panel__btn')) {
-  document.querySelector('.tab-panel__btn').click()
-}
+  modalClose.addEventListener("click", () => {
+    localStorage.setItem('user-name', userNameInput.value)
+    localStorage.setItem('user-email', emailInput.value)
+    localStorage.setItem('user-message', messageInput.value)
 
-
-
-// Feedback modal
-
-const feedbackModal = document.querySelector('.modal-feedback');
-const openFeedbackButton = document.querySelector('.contacts__btn');
-const feedbackForm = document.querySelector('.modal-feedback__form');
-
-const modalClose = feedbackModal.querySelector('.modal-close');
-const emailInput = feedbackModal.querySelector('[name=feedback-email]');
-const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
-const messageInput = feedbackModal.querySelector('[name=feedback-message]');
-
-let inStorageSupport = true;
-let userNameStorage;
-let emailStorage;
-let messageStorage;
-
-try {
-  userNameStorage = localStorage.getItem('user-name')
-  emailStorage = localStorage.getItem('user-email')
-  messageStorage = localStorage.getItem('user-message')
-} catch (err) {
-  inStorageSupport = false;
-}
-
-openFeedbackButton.addEventListener("click", (evt) => {
-  feedbackModal.classList.add('modal--show')
-
-  if (userNameStorage) {
-    userNameInput.value = userNameStorage
-    emailInput.focus()
-  } else {
-    userNameInput.focus()
-  }
-  if (emailStorage) {
-    emailInput.value = emailStorage
-    messageInput.focus()
-  } else {
-    emailInput.focus()
-  }
-  if (messageStorage) {
-    messageInput.value = messageStorage
-    userNameInput.focus()
-  }
-});
-
-modalClose.addEventListener("click", () => {
-  localStorage.setItem('user-name', userNameInput.value)
-  localStorage.setItem('user-email', emailInput.value)
-  localStorage.setItem('user-message', messageInput.value)
-
-  feedbackModal.classList.remove('modal--show')
-  feedbackModal.classList.remove('modal--error')
-});
-
-feedbackForm.addEventListener('submit', (evt) => {
-  if (!userNameInput.value || !emailInput.value || !messageInput.value) {
-    evt.preventDefault()
+    feedbackModal.classList.remove('modal--show')
     feedbackModal.classList.remove('modal--error')
-    feedbackModal.offsetWidth = feedbackModal.offsetWidth
-    feedbackModal.classList.add('modal--error')
-  }
+  });
 
-  localStorage.removeItem('user-name')
-  localStorage.removeItem('user-email')
-  localStorage.removeItem('user-message')
-});
-
-window.addEventListener('keyup', (evt) => {
-  if (evt.keyCode === 27) {
-    if (feedbackModal.classList.contains('modal--show')) {
+  feedbackForm.addEventListener('submit', (evt) => {
+    if (!userNameInput.value || !emailInput.value || !messageInput.value) {
       evt.preventDefault()
-      feedbackModal.classList.remove('modal--show')
+      feedbackModal.classList.remove('modal--error')
+      feedbackModal.offsetWidth = feedbackModal.offsetWidth
+      feedbackModal.classList.add('modal--error')
     }
-  }
-});
+
+    localStorage.removeItem('user-name')
+    localStorage.removeItem('user-email')
+    localStorage.removeItem('user-message')
+  });
+
+  window.addEventListener('keyup', (evt) => {
+    if (evt.keyCode === 27) {
+      if (feedbackModal.classList.contains('modal--show')) {
+        evt.preventDefault()
+        feedbackModal.classList.remove('modal--show')
+      }
+    }
+  });
 
 // Modal map
 
-const mapModal = document.querySelector('.modal-map');
-const openMapButton = document.querySelector('.contacts__map');
-const modalCloseMap = mapModal.querySelector('.modal-close');
+  const mapModal = document.querySelector('.modal-map');
+  const openMapButton = document.querySelector('.contacts__map');
+  const modalCloseMap = mapModal.querySelector('.modal-close');
 
-openMapButton.addEventListener('click', () => {
-  mapModal.classList.add('modal--show')
-});
+  openMapButton.addEventListener('click', () => {
+    mapModal.classList.add('modal--show')
+  });
 
-modalCloseMap.addEventListener('click', () => {
-  mapModal.classList.remove('modal--show')
-});
+  modalCloseMap.addEventListener('click', () => {
+    mapModal.classList.remove('modal--show')
+  });
+
+// Map
+
+  ymaps.ready(init);
+
+  function init() {
+    const map = new ymaps.Map('map', {
+      center: [59.940163930035936, 30.314802652053764],
+      zoom: 16,
+      controls: ['zoomControl']
+    });
+
+    const placemark = new ymaps.Placemark([59.93863506417266, 30.323117499999945], {
+      iconLayout: 'default#image'
+    });
+
+    map.geoObjects.add(placemark);
+  }
+}
 
 // Bookmark active
 
@@ -171,22 +190,6 @@ continueBtn.addEventListener('click', () => {
   modalNotice.classList.remove('modal--show')
 });
 
-// Map
 
-ymaps.ready(init);
-
-function init() {
-  const map = new ymaps.Map('map', {
-    center: [59.940163930035936, 30.314802652053764],
-    zoom: 16,
-    controls: ['zoomControl']
-  });
-
-  const placemark = new ymaps.Placemark([59.93863506417266, 30.323117499999945], {
-    iconLayout: 'default#image'
-  });
-
-  map.geoObjects.add(placemark);
-}
 
 
