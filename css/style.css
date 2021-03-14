@@ -2424,7 +2424,7 @@ img {
 .sorting {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  padding: 9px 16px 9px 19px;
+  padding: 9px 16px 4px 19px;
   width: 700px;
   min-height: 38px;
   background-color: var(--form-special-color);
@@ -2452,6 +2452,10 @@ img {
   padding: 0 0 0 45px;
   margin: 0;
   list-style: none;
+}
+
+.sorting__item {
+  margin-bottom: 5px;
 }
 
 .sorting__item--price {
