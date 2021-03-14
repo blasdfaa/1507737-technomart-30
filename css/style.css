@@ -313,6 +313,7 @@ img {
   right: 19px;
   width: 21px;
   height: 21px;
+  z-index: 2;
 }
 
 .modal-close::after {
