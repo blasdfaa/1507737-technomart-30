@@ -579,7 +579,7 @@ img {
   margin-bottom: 40px;
 }
 
-.user-info__title {
+.user-info__lead {
   margin: 0 23px 0 0;
   padding: 0 0 0 31px;
   max-width: 228px;
@@ -590,7 +590,7 @@ img {
   color: var(--main-text-red-color);
 }
 
-.page-catalog .user-info__title {
+.page-catalog .user-info__lead {
   margin: 0 42px 0 0;
 }
 
