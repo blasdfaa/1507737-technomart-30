@@ -1712,8 +1712,12 @@ img {
   justify-content: flex-end;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0 0 35px;
+  margin: 0 0 30px;
   list-style: none;
+}
+
+.main-links__item {
+  margin-bottom: 5px;
 }
 
 .main-links__item:not(:first-child) {
@@ -1745,6 +1749,10 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.secondary-links__item {
+  margin-bottom: 5px;
 }
 
 .secondary-links__item:not(:first-child) {
