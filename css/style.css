@@ -156,6 +156,8 @@
 
   --modal-footer-bg-color: #F4F4F4;
 
+  --sorting-underline: linear-gradient(to right, var(--basic-red) 40%, rgba(255, 255, 255, 0) 20%);
+
   --catalog-border-btn-color: #E5E5E5;
   --catalog-border-btn-hover-color: #C5C5C5;
   --catalog-border-btn-active-color: #EE3643;
@@ -324,7 +326,7 @@ img {
   right: 0;
 }
 
-.modal-close:hover::after{
+.modal-close:hover::after {
   transform: scale(1.1);
 }
 
@@ -2482,7 +2484,7 @@ img {
   color: rgba(var(--main-text-dark-rgb), 0.3);
   text-transform: uppercase;
   text-decoration: none;
-  background-image: linear-gradient(to right, var(--basic-red) 40%, rgba(255, 255, 255, 0) 20%);
+  background-image: var(--sorting-underline);
   background-position: bottom;
   background-size: 3px 1px;
   background-repeat: repeat-x;
@@ -2499,6 +2501,17 @@ img {
   color: var(--basic-red);
   border: none;
 }
+
+.sorting__btn--current,
+.sorting__btn--current:hover,
+.sorting__btn--current:active,
+.sorting__btn--current:focus {
+  color: var(--basic-red);
+  border: none;
+  background: none;
+  cursor: default;
+}
+
 
 .sorting__arrow {
   width: 11px;
@@ -2524,12 +2537,12 @@ img {
 
 .sorting__arrow--up:active {
   border-color: transparent transparent var(--basic-red) transparent;
-   opacity: 1;
+  opacity: 1;
 }
 
 .sorting__arrow--down:active {
   border-color: var(--basic-red) transparent transparent transparent;
-   opacity: 1;
+  opacity: 1;
 }
 
 /*Catalog product*/
@@ -2598,6 +2611,11 @@ img {
 .pagination__link--current {
   color: var(--main-text-white-color);
   background-color: var(--basic-red);
+  border-color: var(--basic-red);
+}
+
+.pagination__link--current:hover,
+.pagination__link--current:active {
   border-color: var(--basic-red);
 }
 
