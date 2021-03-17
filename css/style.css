@@ -296,6 +296,10 @@ img {
   background-color: var(--main-btn-active-color);
 }
 
+.company-logo[href]:focus {
+  outline-offset: -2px;
+}
+
 /*Modal*/
 
 .modal {
@@ -455,6 +459,10 @@ img {
   background-color: var(--basic-white);
 }
 
+.page-header__search:focus {
+  outline-offset: -2px;
+}
+
 .header-menu {
   display: flex;
   flex-wrap: wrap;
@@ -555,6 +563,10 @@ img {
 .header-menu__link--checkout:active {
   color: rgba(var(--main-text-white-rgb), 0.5);
   background-color: var(--order-btn-color);
+}
+
+.header-menu__link:focus {
+  outline-offset: -2px;
 }
 
 /*Submenu*/
@@ -845,6 +857,10 @@ img {
 
 .header-submenu__link:active {
   background-color: var(--nav-btn-active-color);
+}
+
+.header-submenu__link:focus {
+  outline-offset: -2px;
 }
 
 /*Features*/
@@ -2087,7 +2103,7 @@ img {
 .catalog__inner {
   display: grid;
   grid-template: min-content 1fr / 220px 1fr;
-  column-gap: 21px;
+  column-gap: 20px;
   row-gap: 28px;
 }
 
