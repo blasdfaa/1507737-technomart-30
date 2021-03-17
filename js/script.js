@@ -89,7 +89,7 @@ if (document.querySelector('body').classList.contains('page')) {
     inStorageSupport = false;
   }
 
-  openFeedbackButton.addEventListener("click", (evt) => {
+  openFeedbackButton.addEventListener('click', (evt) => {
     feedbackModal.classList.add('modal--show')
 
     if (userNameStorage) {
@@ -110,7 +110,7 @@ if (document.querySelector('body').classList.contains('page')) {
     }
   });
 
-  modalClose.addEventListener("click", () => {
+  modalClose.addEventListener('click', () => {
     localStorage.setItem('user-name', userNameInput.value)
     localStorage.setItem('user-email', emailInput.value)
     localStorage.setItem('user-message', messageInput.value)
