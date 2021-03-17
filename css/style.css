@@ -455,7 +455,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.header-menu__list {
+.header-menu {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -814,7 +814,7 @@ img {
 
 /*Submenu*/
 
-.header-submenu__list {
+.header-submenu {
   display: flex;
   flex-wrap: wrap;
   padding: 0 26px;
@@ -1438,7 +1438,7 @@ img {
   cursor: default;
 }
 
-.tab-content__list {
+.tab-content {
   padding: 0 0 0 80px;
   margin: 0;
   list-style: none;
@@ -1721,7 +1721,7 @@ img {
   text-decoration: none;
 }
 
-.secondary__links {
+.secondary-links {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
