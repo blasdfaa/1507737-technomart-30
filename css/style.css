@@ -317,7 +317,7 @@ img {
 .modal-close {
   position: absolute;
   top: 14px;
-  right: 19px;
+  right: 11px;
   width: 21px;
   height: 21px;
   z-index: 2;
@@ -335,7 +335,7 @@ img {
 }
 
 .modal-bottom {
-  padding: 37px 88px 37px 72px;
+  padding: 38px 80px 37px 80px;
   min-height: 112px;
   background-color: var(--modal-footer-bg-color);
 }
@@ -1886,6 +1886,7 @@ img {
 /*Feedback modal*/
 
 .modal-feedback {
+  margin-left: -8px;
   width: 620px;
   min-height: 423px;
 }
@@ -1893,7 +1894,7 @@ img {
 .modal-feedback__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 40px 89px 0 73px;
+  padding: 39px 80px 0 81px;
   column-gap: 22px;
   row-gap: 13px;
 }
@@ -1953,12 +1954,18 @@ img {
 /*Modal map*/
 
 .modal-map {
-  width: 943px;
+  margin-left: -8px;
+  width: 940px;
   height: 450px;
 }
 
 .modal-map__container {
   height: 450px;
+}
+
+.modal-map__close {
+  top: 10px;
+  right: 9px;
 }
 
 /*Modal add cart*/
