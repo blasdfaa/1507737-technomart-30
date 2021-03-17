@@ -1008,6 +1008,7 @@ img {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  background-color: var(--reserve-slider-color);
 }
 
 .promo-slider__link {
