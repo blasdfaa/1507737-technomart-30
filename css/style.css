@@ -2164,7 +2164,8 @@ img {
 }
 
 .filter-price__bar {
-  width: 50%;
+  width: 80%;
+  margin-left: 0;
   height: 2px;
   background-color: var(--price-range-bar-color);
 }
