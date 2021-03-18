@@ -13,10 +13,6 @@ if (document.querySelector('body').classList.contains('page')) {
     showSlides(slideIndex -= 1);
   }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
   function showSlides(n) {
     let slides = document.getElementsByClassName('promo-slider__item');
 
@@ -32,6 +28,9 @@ if (document.querySelector('body').classList.contains('page')) {
     }
     slides[slideIndex - 1].style.display = 'flex';
   }
+
+  document.querySelector('.js-btn-prev').onclick = previousSlide;
+  document.querySelector('.js-btn-next').onclick = nextSlide;
 
   // Services tabs
 
