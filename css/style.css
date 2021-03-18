@@ -183,7 +183,7 @@
 .page-catalog {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  font-family: 'Cuprum', 'Arial', serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   color: var(--main-text-white-color);
@@ -381,7 +381,7 @@ img {
 }
 
 .filter-legend {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
@@ -1212,7 +1212,7 @@ img {
 
 .product__name {
   margin: 0 0 8px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -1222,7 +1222,7 @@ img {
 
 .product__old-price {
   margin-bottom: 13px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -1266,7 +1266,7 @@ img {
 }
 
 .product__cost {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -1369,7 +1369,7 @@ img {
 }
 
 .services__desc {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   margin: 0;
   font-weight: 400;
   font-size: 13px;
@@ -1489,7 +1489,7 @@ img {
 }
 
 .tab-content__desc {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   margin: 0 0 1px;
   font-weight: 400;
   font-size: 13px;
@@ -1562,7 +1562,7 @@ img {
 }
 
 .about__desc {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   margin: 0;
   font-weight: 400;
   font-size: 13px;
@@ -1632,7 +1632,7 @@ img {
 }
 
 .contacts__desc {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   margin: 0 0 33px;
   font-weight: 400;
   font-size: 13px;
@@ -1924,7 +1924,7 @@ img {
 }
 
 .modal-feedback__input::placeholder {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
@@ -2071,7 +2071,7 @@ img {
 }
 
 .breadcrumb__link {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2138,7 +2138,7 @@ img {
 
 .filter__title {
   margin: 0;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2235,7 +2235,7 @@ img {
   padding: 10px;
   width: 95px;
   height: 38px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -2260,7 +2260,7 @@ img {
 }
 
 .filter-price__divider {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -2297,7 +2297,7 @@ img {
 
 .filter-brand__label {
   position: relative;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
@@ -2384,7 +2384,7 @@ img {
 
 .filter-supply__label {
   position: relative;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
@@ -2439,7 +2439,7 @@ img {
 
 .filter__btn {
   padding: 9px 78px 9px 79px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2473,7 +2473,7 @@ img {
 .sorting__title {
   margin: 0;
   max-width: 165px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2510,7 +2510,7 @@ img {
 }
 
 .sorting__btn {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2616,7 +2616,7 @@ img {
 
 .pagination__link {
   padding: 9px 15px 9px 14px;
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2669,7 +2669,7 @@ img {
 }
 
 .product-info__desc {
-  font-family: 'PT Sans', 'Arial', serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   margin: 0;
   font-weight: 400;
   font-size: 13px;
