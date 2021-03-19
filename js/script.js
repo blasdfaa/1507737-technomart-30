@@ -89,6 +89,8 @@ if (document.querySelector('body').classList.contains('page')) {
   }
 
   openFeedbackButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
+
     feedbackModal.classList.add('modal--show')
 
     if (userNameStorage) {
@@ -146,7 +148,8 @@ if (document.querySelector('body').classList.contains('page')) {
   const openMapButton = document.querySelector('.contacts__map');
   const modalCloseMap = mapModal.querySelector('.modal-close');
 
-  openMapButton.addEventListener('click', () => {
+  openMapButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
     mapModal.classList.add('modal--show')
   });
 
